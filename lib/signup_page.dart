@@ -4,6 +4,7 @@ import 'package:flutter_application_1/screens/google_page.dart';
 import 'package:flutter_application_1/screens/home_page.dart';
 
 import 'login_page.dart';
+import 'main_page.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -123,7 +124,7 @@ class _MyWidgetState extends State<SignupPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  HomePage()));
+                                                  MainPage()));
                                     },
                                   ),
                                 ),

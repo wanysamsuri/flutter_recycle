@@ -5,20 +5,15 @@ import 'package:flutter/widgets.dart';
 
 import 'noti_page.dart';
 
-class CategoriesPage extends StatefulWidget {
-  const CategoriesPage({Key? key}) : super(key: key);
+class NewsPage extends StatelessWidget {
+  const NewsPage({Key? key}) : super(key: key);
 
-  @override
-  State<CategoriesPage> createState() => _CategoriesPageState();
-}
-
-class _CategoriesPageState extends State<CategoriesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.green,
-          title: const Center(child: const Text('Categories')),
+          title: const Center(child: const Text('News & Update')),
           actions: <Widget>[
             IconButton(
               icon: const Icon(
@@ -41,7 +36,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             SizedBox(height: 10),
             Text(
-              "Plastic",
+              "News",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

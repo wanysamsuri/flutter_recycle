@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/google_page.dart';
 import 'package:flutter_application_1/screens/home_page.dart';
 
+import 'main_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -113,7 +115,7 @@ class _MyWidgetState extends State<LoginPage> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  HomePage()));
+                                                  MainPage()));
                                     },
                                   ),
                                 ),
@@ -139,45 +141,6 @@ class _MyWidgetState extends State<LoginPage> {
                                   ),
                                 ),
                               ),
-                              // Column(
-                              //   children: [
-                              //     Container(
-                              //       height: 40,
-                              //       child: Material(
-                              //           borderRadius: BorderRadius.circular(20),
-                              //           color: Colors.green,
-                              //           elevation: 7.0,
-                              //           child: GestureDetector(
-                              //             onTap: () {},
-                              //             child: Center(
-                              //               child: Text("Sign In",
-                              //                   style: TextStyle(
-                              //                     color: Colors.white,
-                              //                   )),
-                              //             ),
-                              //           )),
-                              //     ),
-                              // SizedBox(height: 20),
-                              // Text('or'),
-                              //     SizedBox(height: 20),
-                              //     Container(
-                              //       height: 40,
-                              //       child: Material(
-                              //           borderRadius: BorderRadius.circular(20),
-                              //           color: Colors.grey[400],
-                              //           elevation: 7.0,
-                              //           child: GestureDetector(
-                              //             onTap: () {},
-                              //             child: Center(
-                              //               child: Text("Sign In with Google",
-                              //                   style: TextStyle(
-                              //                     color: Colors.black,
-                              //                   )),
-                              //             ),
-                              //           )),
-                              //     ),
-                              //   ],
-                              // ),
                             ],
                           ))),
                 ],
@@ -194,7 +157,7 @@ class _MyWidgetState extends State<LoginPage> {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  // SizedBox(height: 10),
                   InkWell(
                     onTap: () {
                       Navigator.of(context).pushNamed('/signup_page');

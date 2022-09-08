@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/cancel_page.dart';
 import 'package:flutter_application_1/screens/forgot_page.dart';
 import 'package:flutter_application_1/screens/google_page.dart';
+import 'package:flutter_application_1/screens/location_page.dart';
 import 'package:flutter_application_1/signup_page.dart';
 import 'signup_page.dart';
 import 'login_page.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/google_page': ((context) => new GooglePage()),
         '/login_page': ((context) => new LoginPage()),
         '/cancel_page': ((context) => new CancelPage()),
+        '/location_page': ((context) => new LocationPage()),
       },
       home: LoginPage(),
     );
