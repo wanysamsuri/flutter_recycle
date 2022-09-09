@@ -1,17 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/widgets.dart';
+import 'upcoming_page.dart' as tab1;
+import 'past_page.dart' as tab2;
 
 import 'noti_page.dart';
 
-class LocationPage extends StatelessWidget {
+class LocationPage extends StatefulWidget {
   const LocationPage({Key? key}) : super(key: key);
+  @override
+  State<LocationPage> createState() => _LocationPageState();
+}
+
+class _LocationPageState extends State<LocationPage>
+    with SingleTickerProviderStateMixin {
+  late TabController controller;
+
+  @override
+  void initState() {
+    controller = TabController(length: 2, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.green,
           title: const Center(child: const Text('Collections')),
           actions: <Widget>[
@@ -27,26 +45,23 @@ class LocationPage extends StatelessWidget {
                 );
               },
             )
-          ]),
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            SizedBox(height: 10),
-            Text(
-              "Collections",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
-            SizedBox(height: 10),
+          ],
+          bottom: TabBar(controller: controller, tabs: <Widget>[
+            Tab(
+                child: Text(
+              'UPCOMING',
+              style: TextStyle(fontSize: 16),
+            )),
+            Tab(
+                child: Text(
+              'PAST',
+              style: TextStyle(fontSize: 16),
+            )),
           ]),
         ),
-      ),
-    );
+        body: TabBarView(controller: controller, children: <Widget>[
+          tab1.UpcomingPage(),
+          tab2.PastPage(),
+        ]));
   }
 }

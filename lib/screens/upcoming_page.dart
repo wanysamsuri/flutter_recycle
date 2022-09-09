@@ -3,38 +3,23 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 
-import 'noti_page.dart';
+class UpcomingPage extends StatefulWidget {
+  const UpcomingPage({Key? key}) : super(key: key);
 
-class NewsPage extends StatelessWidget {
-  const NewsPage({Key? key}) : super(key: key);
+  @override
+  State<UpcomingPage> createState() => _UpcomingPageState();
+}
 
+class _UpcomingPageState extends State<UpcomingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: const Center(child: const Text('News & Update')),
-            actions: <Widget>[
-              IconButton(
-                icon: const Icon(
-                  Icons.notifications,
-                  color: Colors.white,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const NotiPage()),
-                  );
-                },
-              )
-            ]),
-        backgroundColor: Color.fromARGB(224, 209, 250, 210),
         body: SafeArea(
             child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: SingleChildScrollView(
                   child: Column(children: [
-                    SizedBox(height: 10),
+                    SizedBox(height: 25),
                     Container(
                         child: ListView(
                       shrinkWrap: true,
@@ -44,20 +29,29 @@ class NewsPage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(0)),
+                              color: Color.fromARGB(224, 209, 250, 210),
+                              borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                SizedBox(height: 25),
+                                Container(child: Icon(Icons.calendar_month)),
+                                SizedBox(height: 5),
                                 Row(
                                   children: [
                                     Container(
-                                        child: Image.asset(
-                                      'assets/news.png',
-                                      height: 100,
-                                      scale: 2,
-                                    )),
+                                      child: RichText(
+                                        text: TextSpan(
+                                          text: 'SEPT 29',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                     const Divider(
                                       height: 20,
                                       thickness: 5,
@@ -65,17 +59,17 @@ class NewsPage extends StatelessWidget {
                                       endIndent: 0,
                                       color: Colors.black,
                                     ),
+                                    Spacer(),
                                     Container(
                                         child: RichText(
                                             text: TextSpan(
                                                 text:
-                                                    'Queen Elizabeth II has died',
+                                                    'RFL Collection @ SMK Bukit Indah',
                                                 style: TextStyle(
-                                                  color: Colors.blue,
+                                                  color: Color.fromARGB(
+                                                      255, 0, 0, 0),
                                                   fontSize: 16,
-                                                  decoration:
-                                                      TextDecoration.underline,
-                                                )))),
+                                                ))))
                                   ],
                                 ),
                                 SizedBox(height: 5),
@@ -85,19 +79,21 @@ class NewsPage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(0)),
+                              color: Color.fromARGB(224, 209, 250, 210),
+                              borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
+                                Container(child: Icon(Icons.calendar_month)),
+                                SizedBox(height: 5),
                                 Row(
                                   children: [
                                     Container(
                                       child: RichText(
                                         text: TextSpan(
-                                          text: 'image',
+                                          text: 'SEPT 29',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
@@ -117,7 +113,8 @@ class NewsPage extends StatelessWidget {
                                     Container(
                                         child: RichText(
                                             text: TextSpan(
-                                                text: 'News & Update',
+                                                text:
+                                                    'RFL Collection @ SMK Bukit Indah',
                                                 style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0),
@@ -132,19 +129,21 @@ class NewsPage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(0)),
+                              color: Color.fromARGB(224, 209, 250, 210),
+                              borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
+                                Container(child: Icon(Icons.calendar_month)),
+                                SizedBox(height: 5),
                                 Row(
                                   children: [
                                     Container(
                                       child: RichText(
                                         text: TextSpan(
-                                          text: 'image',
+                                          text: 'SEPT 29',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
@@ -164,7 +163,8 @@ class NewsPage extends StatelessWidget {
                                     Container(
                                         child: RichText(
                                             text: TextSpan(
-                                                text: 'News & Update',
+                                                text:
+                                                    'RFL Collection @ SMK Bukit Indah',
                                                 style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0),
@@ -179,19 +179,21 @@ class NewsPage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(0)),
+                              color: Color.fromARGB(224, 209, 250, 210),
+                              borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
+                                Container(child: Icon(Icons.calendar_month)),
+                                SizedBox(height: 5),
                                 Row(
                                   children: [
                                     Container(
                                       child: RichText(
                                         text: TextSpan(
-                                          text: 'image',
+                                          text: 'SEPT 29',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
@@ -211,7 +213,8 @@ class NewsPage extends StatelessWidget {
                                     Container(
                                         child: RichText(
                                             text: TextSpan(
-                                                text: 'News & Update',
+                                                text:
+                                                    'RFL Collection @ SMK Bukit Indah',
                                                 style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0),
@@ -226,19 +229,21 @@ class NewsPage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(0)),
+                              color: Color.fromARGB(224, 209, 250, 210),
+                              borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
+                                Container(child: Icon(Icons.calendar_month)),
+                                SizedBox(height: 5),
                                 Row(
                                   children: [
                                     Container(
                                       child: RichText(
                                         text: TextSpan(
-                                          text: 'image',
+                                          text: 'SEPT 29',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
@@ -258,7 +263,8 @@ class NewsPage extends StatelessWidget {
                                     Container(
                                         child: RichText(
                                             text: TextSpan(
-                                                text: 'News & Update',
+                                                text:
+                                                    'RFL Collection @ SMK Bukit Indah',
                                                 style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0),
@@ -273,19 +279,21 @@ class NewsPage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(0)),
+                              color: Color.fromARGB(224, 209, 250, 210),
+                              borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
+                                Container(child: Icon(Icons.calendar_month)),
+                                SizedBox(height: 5),
                                 Row(
                                   children: [
                                     Container(
                                       child: RichText(
                                         text: TextSpan(
-                                          text: 'image',
+                                          text: 'SEPT 29',
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
@@ -305,7 +313,8 @@ class NewsPage extends StatelessWidget {
                                     Container(
                                         child: RichText(
                                             text: TextSpan(
-                                                text: 'News & Update',
+                                                text:
+                                                    'RFL Collection @ SMK Bukit Indah',
                                                 style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 0, 0, 0),
@@ -316,7 +325,7 @@ class NewsPage extends StatelessWidget {
                                 SizedBox(height: 5),
                               ]),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 25),
                       ],
                     )),
                   ]),

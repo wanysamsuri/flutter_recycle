@@ -1,35 +1,18 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_1/screens/noti_page.dart';
 
-import 'location_page.dart';
+class PastPage extends StatefulWidget {
+  const PastPage({Key? key}) : super(key: key);
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  @override
+  State<PastPage> createState() => _PastPageState();
+}
 
+class _PastPageState extends State<PastPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: const Center(child: const Text('Drop Off Centre')),
-            actions: <Widget>[
-              IconButton(
-                icon: const Icon(
-                  Icons.notifications,
-                  color: Colors.white,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const NotiPage()),
-                  );
-                },
-              )
-            ]),
         body: SafeArea(
             child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
@@ -45,19 +28,19 @@ class HomePage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(224, 209, 250, 210),
+                              color: Color.fromARGB(255, 205, 205, 205),
                               borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
-                                Container(child: Icon(Icons.push_pin)),
+                                Container(child: Icon(Icons.calendar_month)),
                                 SizedBox(height: 5),
                                 Container(
                                   child: RichText(
                                     text: TextSpan(
-                                      text: 'Green Resource Recovery SDN. BHD',
+                                      text: 'APR 29',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
@@ -71,7 +54,7 @@ class HomePage extends StatelessWidget {
                                     child: RichText(
                                         text: TextSpan(
                                             text:
-                                                '7 Blok E Phileo Damansara 1 Jln 16/11 Off Jalan Damansara 46350Petaling Jaya 46350 Malaysia',
+                                                'RFL Collection @ SMK Bukit Indah',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 15,
@@ -82,19 +65,19 @@ class HomePage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(224, 209, 250, 210),
+                              color: Color.fromARGB(255, 205, 205, 205),
                               borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
-                                Container(child: Icon(Icons.push_pin)),
+                                Container(child: Icon(Icons.calendar_month)),
                                 SizedBox(height: 5),
                                 Container(
                                   child: RichText(
                                     text: TextSpan(
-                                      text: 'Green Resource Recovery SDN. BHD',
+                                      text: 'APR 30',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
@@ -108,7 +91,7 @@ class HomePage extends StatelessWidget {
                                     child: RichText(
                                         text: TextSpan(
                                             text:
-                                                '7 Blok E Phileo Damansara 1 Jln 16/11 Off Jalan Damansara 46350Petaling Jaya 46350 Malaysia',
+                                                'RFL Collection @ SMK Permatang Pauh',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 15,
@@ -119,19 +102,19 @@ class HomePage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(224, 209, 250, 210),
+                              color: Color.fromARGB(255, 205, 205, 205),
                               borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
-                                Container(child: Icon(Icons.push_pin)),
+                                Container(child: Icon(Icons.calendar_month)),
                                 SizedBox(height: 5),
                                 Container(
                                   child: RichText(
                                     text: TextSpan(
-                                      text: 'Green Resource Recovery SDN. BHD',
+                                      text: 'MAY 1',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
@@ -145,7 +128,7 @@ class HomePage extends StatelessWidget {
                                     child: RichText(
                                         text: TextSpan(
                                             text:
-                                                '7 Blok E Phileo Damansara 1 Jln 16/11 Off Jalan Damansara 46350Petaling Jaya 46350 Malaysia',
+                                                'RFL Collection @ SMK Megat Dewa',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 15,
@@ -156,19 +139,19 @@ class HomePage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(224, 209, 250, 210),
+                              color: Color.fromARGB(255, 205, 205, 205),
                               borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
-                                Container(child: Icon(Icons.push_pin)),
+                                Container(child: Icon(Icons.calendar_month)),
                                 SizedBox(height: 5),
                                 Container(
                                   child: RichText(
                                     text: TextSpan(
-                                      text: 'Green Resource Recovery SDN. BHD',
+                                      text: 'MAY 3',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
@@ -182,7 +165,7 @@ class HomePage extends StatelessWidget {
                                     child: RichText(
                                         text: TextSpan(
                                             text:
-                                                '7 Blok E Phileo Damansara 1 Jln 16/11 Off Jalan Damansara 46350Petaling Jaya 46350 Malaysia',
+                                                'RFL Collection @ SMK Permatang Pauh',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 15,
@@ -193,19 +176,19 @@ class HomePage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(224, 209, 250, 210),
+                              color: Color.fromARGB(255, 205, 205, 205),
                               borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
-                                Container(child: Icon(Icons.push_pin)),
+                                Container(child: Icon(Icons.calendar_month)),
                                 SizedBox(height: 5),
                                 Container(
                                   child: RichText(
                                     text: TextSpan(
-                                      text: 'Green Resource Recovery SDN. BHD',
+                                      text: 'JUN 20',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
@@ -219,7 +202,7 @@ class HomePage extends StatelessWidget {
                                     child: RichText(
                                         text: TextSpan(
                                             text:
-                                                '7 Blok E Phileo Damansara 1 Jln 16/11 Off Jalan Damansara 46350Petaling Jaya 46350 Malaysia',
+                                                'RFL Collection @ SMK Bukit Indah',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 15,
@@ -230,19 +213,19 @@ class HomePage extends StatelessWidget {
                         Container(
                           height: 200,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(224, 209, 250, 210),
+                              color: Color.fromARGB(255, 205, 205, 205),
                               borderRadius: BorderRadius.circular(20)),
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 25),
-                                Container(child: Icon(Icons.push_pin)),
+                                Container(child: Icon(Icons.calendar_month)),
                                 SizedBox(height: 5),
                                 Container(
                                   child: RichText(
                                     text: TextSpan(
-                                      text: 'Green Resource Recovery SDN. BHD',
+                                      text: 'AUG 14',
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
@@ -256,7 +239,7 @@ class HomePage extends StatelessWidget {
                                     child: RichText(
                                         text: TextSpan(
                                             text:
-                                                '7 Blok E Phileo Damansara 1 Jln 16/11 Off Jalan Damansara 46350Petaling Jaya 46350 Malaysia',
+                                                'RFL Collection @ SMK Bukit Indah',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 15,
