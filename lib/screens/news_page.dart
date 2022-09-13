@@ -3,7 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 
-import 'noti_page.dart';
+import '../Settings/noti_page.dart';
 
 class NewsPage extends StatelessWidget {
   const NewsPage({Key? key}) : super(key: key);

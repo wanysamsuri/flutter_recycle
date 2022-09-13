@@ -8,6 +8,9 @@ import 'package:flutter_application_1/screens/home_page.dart';
 import 'package:flutter_application_1/screens/location_page.dart';
 import 'package:flutter_application_1/screens/news_page.dart';
 
+import 'Settings/account_page.dart';
+import 'Settings/edit_page.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -21,7 +24,8 @@ class _MainPageState extends State<MainPage> {
     const CategoriesPage(),
     const LocationPage(),
     const NewsPage(),
-    const AboutPage(),
+    const ProfilePage(),
+    const EditPage(),
   ];
 
   int selectedIndex = 0;
@@ -32,12 +36,11 @@ class _MainPageState extends State<MainPage> {
       const Icon(Icons.category),
       const Icon(Icons.gps_fixed),
       const Icon(Icons.newspaper),
-      const Icon(Icons.info),
+      const Icon(Icons.person),
     ];
 
     return Scaffold(
         backgroundColor: Colors.white,
-        
         bottomNavigationBar: CurvedNavigationBar(
           //buttonBackgroundColor: Colors.grey,
           color: const Color.fromARGB(255, 221, 218, 218),

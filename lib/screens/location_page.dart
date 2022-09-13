@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'upcoming_page.dart' as tab1;
 import 'past_page.dart' as tab2;
 
-import 'noti_page.dart';
+import '../Settings/noti_page.dart';
 
 class LocationPage extends StatefulWidget {
   const LocationPage({Key? key}) : super(key: key);

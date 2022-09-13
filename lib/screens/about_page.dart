@@ -4,7 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 
-import 'noti_page.dart';
+import '../Settings/noti_page.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -14,22 +14,23 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: const Center(child: const Text('About')),
-            actions: <Widget>[
-              IconButton(
-                icon: const Icon(
-                  Icons.notifications,
-                  color: Colors.white,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const NotiPage()),
-                  );
-                },
-              )
-            ]),
+          backgroundColor: Colors.green,
+          title: const Center(child: const Text('About')),
+          // actions: <Widget>[
+          //   IconButton(
+          //     icon: const Icon(
+          //       Icons.notifications,
+          //       color: Colors.white,
+          //     ),
+          //     onPressed: () {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(builder: (context) => const NotiPage()),
+          //       );
+          //   },
+          // )
+          // ]
+        ),
         body: Stack(children: <Widget>[
           Container(
             decoration: BoxDecoration(
