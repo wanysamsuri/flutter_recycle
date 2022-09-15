@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_1/screens/about_page.dart';
-import 'package:flutter_application_1/screens/categories_page.dart';
+
 import 'package:flutter_application_1/screens/home_page.dart';
 import 'package:flutter_application_1/screens/location_page.dart';
 import 'package:flutter_application_1/screens/news_page.dart';
 
+import 'Categories/categories.dart';
+import 'Categories/sorting_page.dart';
 import 'Settings/account_page.dart';
 import 'Settings/edit_page.dart';
 
@@ -21,11 +23,10 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   var screens = [
     const HomePage(),
-    const CategoriesPage(),
+    const CategoryPage(),
     const LocationPage(),
     const NewsPage(),
     const ProfilePage(),
-    const EditPage(),
   ];
 
   int selectedIndex = 0;
@@ -35,7 +36,7 @@ class _MainPageState extends State<MainPage> {
       const Icon(Icons.home),
       const Icon(Icons.category),
       const Icon(Icons.gps_fixed),
-      const Icon(Icons.newspaper),
+      const Icon(Icons.newspaper), 
       const Icon(Icons.person),
     ];
 

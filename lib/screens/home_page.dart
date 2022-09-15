@@ -2,7 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_1/Settings/noti_page.dart';
+import 'package:flutter_application_1/Notification/noti_page.dart';
 
 import 'location_page.dart';
 
@@ -254,7 +254,7 @@ class HomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Container(
-                          height: 230,
+                          height: 210,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(223, 221, 246, 222),
                               borderRadius: BorderRadius.circular(20)),

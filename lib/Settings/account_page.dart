@@ -2,7 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_1/Settings/noti_page.dart';
+import 'package:flutter_application_1/Notification/noti_page.dart';
 import 'package:flutter_application_1/Settings/setting_page.dart';
 
 import '../login_page.dart';
@@ -153,12 +153,12 @@ class ProfilePage extends StatelessWidget {
                 ]),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 50),
             Container(
               height: 230,
               decoration: BoxDecoration(
-                  color: Color.fromARGB(223, 221, 246, 222),
-                  borderRadius: BorderRadius.circular(20)),
+                  color: Colors.grey[100],
+                  borderRadius: BorderRadius.circular(0)),
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,7 +168,7 @@ class ProfilePage extends StatelessWidget {
                       child: Container(
                           child: Icon(
                         Icons.star,
-                        color: Colors.amber,
+                        color: Colors.black,
                       )),
                     ),
                     SizedBox(height: 5),
@@ -193,8 +193,8 @@ class ProfilePage extends StatelessWidget {
             Container(
                 height: 230,
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(223, 221, 246, 222),
-                    borderRadius: BorderRadius.circular(20)),
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(0)),
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,7 +204,7 @@ class ProfilePage extends StatelessWidget {
                         child: Container(
                             child: Icon(
                           Icons.history,
-                          color: Colors.amber,
+                          color: Colors.black,
                         )),
                       ),
                       SizedBox(height: 5),

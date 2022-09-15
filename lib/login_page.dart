@@ -111,7 +111,8 @@ class _MyWidgetState extends State<LoginPage> {
                                         primary: Colors.green),
                                     child: Text('Sign In'),
                                     onPressed: () {
-                                      Navigator.push(
+                                      Navigator.pushReplacement(
+                                          //paling atas
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>

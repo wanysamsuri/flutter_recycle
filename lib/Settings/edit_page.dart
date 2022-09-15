@@ -2,13 +2,14 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_1/Settings/noti_page.dart';
+import 'package:flutter_application_1/Notification/noti_page.dart';
 import 'package:flutter_application_1/Settings/account_page.dart';
 import 'package:flutter_application_1/Settings/setting_page.dart';
 
 import '../login_page.dart';
 import '../main_page.dart';
 import '../screens/about_page.dart';
+import '../screens/home_page.dart';
 import 'edit_page.dart';
 
 class EditPage extends StatelessWidget {
@@ -21,20 +22,20 @@ class EditPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: const Center(child: const Text('Edit Profile')),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.info,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AboutPage()),
-              );
-            },
-          ),
-        ],
+        // actions: <Widget>[
+        //   IconButton(
+        //     icon: const Icon(
+        //       Icons.info,
+        //       color: Colors.white,
+        //     ),
+        //     onPressed: () {
+        //       Navigator.push(
+        //         context,
+        //         MaterialPageRoute(builder: (context) => const AboutPage()),
+        //       );
+        //     },
+        //   ),
+        // ],
       ),
       body: Container(
         padding: EdgeInsets.only(left: 16, right: 16),
@@ -188,7 +189,7 @@ class EditPage extends StatelessWidget {
           Container(
             child: Center(
               child: Row(children: [
-                SizedBox(width: 120),
+                SizedBox(width: 40),
                 Center(
                   child: Container(
                       child: ElevatedButton(
@@ -206,23 +207,23 @@ class EditPage extends StatelessWidget {
                                     builder: (context) => LoginPage()));
                           })),
                 ),
-                // SizedBox(width: 50),
-                // Container(
-                //   child: ElevatedButton(
-                //     style: ElevatedButton.styleFrom(
-                //         minimumSize: Size(130, 45), primary: Colors.green),
-                //     child: Text(
-                //       'Edit Profile',
-                //       style: TextStyle(fontSize: 18),
-                //     ),
-                //     onPressed: () {
-                //       Navigator.push(
-                //           context,
-                //           MaterialPageRoute(
-                //               builder: (context) => ProfilePage()));
-                //     },
-                //   ),
-                // ),
+                SizedBox(width: 50),
+                Container(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(130, 45), primary: Colors.green),
+                    child: Text(
+                      'Save Edit',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    onPressed: () {
+                      Navigator.pop(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePage()));
+                    },
+                  ),
+                ),
               ]),
             ),
           ),

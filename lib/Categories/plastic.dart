@@ -4,16 +4,16 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 
-import '../Settings/noti_page.dart';
+import '../Notification/noti_page.dart';
 
-class CategoriesPage extends StatefulWidget {
-  const CategoriesPage({Key? key}) : super(key: key);
+class PlasticPage extends StatefulWidget {
+  const PlasticPage({Key? key}) : super(key: key);
 
   @override
-  State<CategoriesPage> createState() => _CategoriesPageState();
+  State<PlasticPage> createState() => _PlasticPageState();
 }
 
-class _CategoriesPageState extends State<CategoriesPage> {
+class _PlasticPageState extends State<PlasticPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -140,17 +140,58 @@ class _CategoriesPageState extends State<CategoriesPage> {
                     SizedBox(height: 10),
                     Container(
                         height: 600,
-                        child: GridView(
-                            gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 2),
-                            children: List.generate(
-                                6,
-                                ((index) => Container(
-                                    margin: EdgeInsets.all(10),
-                                    height: 100,
-                                    color: Color.fromARGB(255, 202, 232, 168),
-                                    child: Text('test'))))))
+                        child: GridView.count(
+                            primary: false,
+                            padding: const EdgeInsets.all(5),
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10,
+                            crossAxisCount: 2,
+                            children: <Widget>[
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Color.fromARGB(223, 221, 246, 222),
+                                child: Center(
+                                  child: Image(
+                                    image: AssetImage("assets/food.jpeg"),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Color.fromARGB(223, 221, 246, 222),
+                                child: Image(
+                                  image: AssetImage("assets/plasticbag.jpg"),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Color.fromARGB(223, 221, 246, 222),
+                                child: Image(
+                                  image: AssetImage("assets/plasticbag.jpg"),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Color.fromARGB(223, 221, 246, 222),
+                                child: Image(
+                                  image: AssetImage("assets/plasticbag.jpg"),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Color.fromARGB(223, 221, 246, 222),
+                                child: Image(
+                                  image: AssetImage("assets/plasticbag.jpg"),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Color.fromARGB(223, 221, 246, 222),
+                                child: Image(
+                                  image: AssetImage("assets/plasticbag.jpg"),
+                                ),
+                              )
+                            ]))
                   ])),
         ));
   }
